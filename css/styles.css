@@ -22,7 +22,9 @@ h1 {
 h2 {
 	font-family:'Roboto Slab';
 	font-size: 62pt;
+    line-height: 62pt;
     color : #3D414F;
+    margin:0px;
 }
 
 h3 {
@@ -30,6 +32,19 @@ h3 {
 	font-size: 25pt;
     line-height : 30pt;
     color : #F0F0F0;
+    margin: 0px;
+}
+
+h4 {
+	font-family:'Roboto Slab';
+	font-size: 25pt;
+    line-height : 35pt;
+    color : #F0F0F0;
+    margin: 0px;
+}
+
+p {
+    color:#3D414F;
 }
 
 .topContainer {
@@ -126,8 +141,7 @@ main {
 }
 
 #portfolioContainer{
-	justify-content: center;
-	border-radius: 10px 10px;
+	border-radius: 10px 10px 0px 0px;
 	width: 1364px;
 	height: 1762px;
 	background-color: #F0F0F0;
@@ -138,52 +152,121 @@ main {
 .portfolioGridArea {
     background-repeat: no-repeat;
     display: grid;
-    align-content:stretch;
+    justify-content:left;
+    padding:2rem;
   }
 
 #portfolioGrid {
-
-  margin: 0px 10%;
   display: grid;
-  grid-template-rows: 552px 552px 552px;
-  grid-template-columns:50% 50%;
+  justify-content: left;
+  grid-template-rows: 552px;
+  /*grid-template-columns: repeat(2, 1fr);*/
+  /*grid-template-columns:50% 50%;*/
+  grid-gap:2rem;
   grid-template-areas:
   "findFlix findFlixText"
-  "doi doiText"
+  "doiText doi"
   "hsco hscoText"
   ;
 }
 
+#portfolioSubGrid {
+    display: grid;
+    grid-template-columns:98px 28px 674px 11px;
+    grid-template-rows:552px;
+    align-items: left;
+    grid-template-areas: 
+    "col1 col2 col3 col4"
+    ;
+}
+
+#portfolioSubGridRight {
+    display: grid;
+    grid-template-columns:11px 674px 28px 98px;
+    grid-template-rows:552px;
+    align-items: left;
+    grid-template-areas: 
+    "col4 col3 col2 col1"
+    ;
+}
+
+#col1 {
+    background-color: #5E647B;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#col2 {
+    background-color: rgba(161, 172, 214, 0.3);
+    z-index: 1;
+}
+
+#col3Flix {
+    background-image:url("../images/FindFlix_Mockup2.jpg");
+}
+
+#col4 {
+    background-color: #5E647B;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#col2Doi {
+    background-image:url("../images/DOI Thumb.jpg");
+}
+
+.portfolioGridAreaText {
+    text-align: left;
+    align-items: center;
+}
+
+.portfolioGridAreaTextRight {
+    text-align: Right;
+    padding-right:21px;
+    padding-left:21px;
+    align-content: center;
+}
+
 #findFlix {
   grid-area: findFlix;
-  background-image:url("../images/FindFlix_Mockup2.jpg");
+  
 
 }
 #doi {
   grid-area: doi;
-  background-image:url("../images/DOI Thumb.jpg");
 }
 
 #hsco {
   grid-area: hsco;
-  background-image:url("../images/HSCO Thumb.jpg");
+}
+#col3Hsco{
+    background-image:url("../images/HSCO Thumb.jpg");
 }
 
 
-
-
-footer {
+footer{
     padding-top: 25px;
-	padding-left:278px;
-    padding-left:282px;
-    height: 303px;
-	background-color: #1D1F26;
+    background-color: #1D1F26;
 }
+
+.footerContainer {
+    justify-content: center;
+	width: 1364px;
+	height: 303px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#bottomGridContainer {
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows:
+}
+
 
 #bottomLogoContainer {
 	background-image: url("../images/KBD Logo.svg");
 	width:283px;
 	height:53px;
+    margin-bottom:23px;
 }
 
 .bottomLogoText {
@@ -191,29 +274,46 @@ footer {
 	height: auto;
 }
 
-.bottomNavRight {
-	/*margin-left: 329px;*/
-    float: right;
+#bottomNavRight {
+    /*float: right;*/
+    padding-left:25%;
+    margin-top:50px;
     width: 600px;
     height: auto;
 }
 
-.bottomNavRight ul li {
+#bottomNavRight ul li {
     list-style-type: none;
     display:block;
 	
 }
-.bottomNavRight ul li a {
+#bottomNavRight ul li a {
     text-decoration: none;
 	color: #F0F0F0;
     font-size: 24px;
-    margin-left: 0px;
-    /*padding-top: 0px;
-    padding-right: 8px;
-    padding-bottom: 0px;
-    padding-left: 8px;
-    margin-right: 0px;*/
+    margin-left:0px;
+    margin-right:0px;
+    padding-left:0px;
+    padding-right:0px;
+
+  
 }
+
+h3 {
+    margin:0px;
+    margin-bottom:31px;
+}
+
+ul {
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.bottomNavMenu {
+    padding-left:0px;
+    padding-right:0px;
+}
+
 
 .chatButton {
 	color: #F0F0F0;
@@ -232,22 +332,21 @@ footer {
 }
 
 .social-icons {
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .social-icons img  {
     padding-right: 24px;
 }
 .copyright {
-    float: right;
+    float: center;
     font-size : 10px;
     color : #F0F0F0;
     margin-top: 21px;
 }
 
-
 /*Tablet View*/
 @media (min-width : 415px ) and ( max-width : 768px ){
-	
+/*	
 .expand   {
     display: block;
 }
@@ -338,8 +437,9 @@ h1 {
 	
 }
 
-
+/*
 /*Mobile View*/
+/*
 @media (max-width : 414px ){
 .mobile-view {
     margin-top: 3px;
