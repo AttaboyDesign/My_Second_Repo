@@ -157,18 +157,17 @@ main {
   }
 
 #portfolioGrid {
-  display: grid;
-  justify-content: left;
-  grid-template-rows: 552px;
-  /*grid-template-columns: repeat(2, 1fr);*/
-  /*grid-template-columns:50% 50%;*/
-  grid-gap:2rem;
-  grid-template-areas:
-  "findFlix findFlixText"
-  "doiText doi"
-  "hsco hscoText"
-  ;
-}
+    display: grid;
+    justify-content: left;
+    grid-template-rows: 552px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:2rem;
+    grid-template-areas:
+    "findFlix findFlix findFlixText"
+    "doiText doi doi"
+    "hsco hsco hscoText"
+    ;
+  }
 
 #portfolioSubGrid {
     display: grid;
