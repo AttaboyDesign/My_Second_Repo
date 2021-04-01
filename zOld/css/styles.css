@@ -21,8 +21,8 @@ h1 {
 
 h2 {
 	font-family:'Roboto Slab';
-	font-size: 42pt;
-    line-height: 48pt;
+	font-size: 62pt;
+    line-height: 62pt;
     color : #3D414F;
     margin:0px;
 }
@@ -42,17 +42,6 @@ h4 {
     color : #F0F0F0;
     margin: 0px;
 }
-
-h5 {
-	font-family:'Roboto Slab';
-    transform: rotate(-90deg);
-	font-size: 85pt;
-    line-height : 85pt;
-    color : #3D414F;
-    margin: 0px;
-    margin-top:25px;
-}
-
 
 p {
     color:#3D414F;
@@ -147,9 +136,9 @@ body {
 
 
 
-/*main {
+main {
     min-height: 800px;
-}*/
+}
 
 #portfolioContainer{
 	border-radius: 10px 10px 0px 0px;
@@ -163,15 +152,16 @@ body {
 .portfolioGridArea {
     background-repeat: no-repeat;
     display: grid;
-    justify-content:space-evenly;
+    justify-content:left;
+    padding:2rem;
   }
 
 #portfolioGrid {
     display: grid;
-    padding:2em;
+    justify-content: left;
     grid-template-rows: 552px;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap:1rem;
+    grid-gap:2rem;
     grid-template-areas:
     "findFlix findFlix findFlixText"
     "doiText doi doi"
@@ -181,7 +171,7 @@ body {
 
 #portfolioSubGrid {
     display: grid;
-    grid-template-columns:98px 0px 674px 11px;
+    grid-template-columns:98px 28px 674px 11px;
     grid-template-rows:552px;
     align-items: left;
     grid-template-areas: 
@@ -191,17 +181,12 @@ body {
 
 #portfolioSubGridRight {
     display: grid;
-    grid-template-columns:11px 674px 0px 98px;
+    grid-template-columns:11px 674px 28px 98px;
     grid-template-rows:552px;
     align-items: left;
     grid-template-areas: 
-    "col4 col2Doi col3Doi col1"
+    "col4 col3 col2 col1"
     ;
-}
-
-#gridTextBox {
-    margin-top:200px;
-    align-content: flex-end;
 }
 
 #col1 {
@@ -211,30 +196,11 @@ body {
 
 #col2 {
     background-color: rgba(161, 172, 214, 0.3);
-    margin-left:-7px;
-    margin-right:-7px;
     z-index: 1;
-}
-
-#col1Doi {
-    background-color: #5E647B;
-    border-radius: 0px 10px 10px 0px;
 }
 
 #col3Flix {
     background-image:url("../images/FindFlix_Mockup2.jpg");
-}
-
-#col3Doi {
-    background-color: rgba(161, 172, 214, 0.3);
-    margin-left:-7px;
-    margin-right:-7px;
-    z-index: 100;
-}
-
-
-#col2Doi {
-    background-image:url("../images/DOI Thumb.jpg");
 }
 
 #col4 {
@@ -242,16 +208,13 @@ body {
     border-radius: 0px 10px 10px 0px;
 }
 
-#col4Doi {
-    background-color: #5E647B;
-    border-radius: 10px 0px 0px 10px;
+#col2Doi {
+    background-image:url("../images/DOI Thumb.jpg");
 }
-
 
 .portfolioGridAreaText {
     text-align: left;
-    justify-content:left;
-    align-content: flex-end;
+    align-items: center;
 }
 
 .portfolioGridAreaTextRight {
@@ -263,6 +226,8 @@ body {
 
 #findFlix {
   grid-area: findFlix;
+  
+
 }
 #doi {
   grid-area: doi;
@@ -311,7 +276,7 @@ footer{
 #bottomNavRight {
     /*float: right;*/
     padding-left:25%;
-    margin-top:0px;
+    margin-top:50px;
     width: 600px;
     height: auto;
 }
@@ -322,7 +287,6 @@ footer{
 	
 }
 #bottomNavRight ul li a {
-    margin-top:0px;
     text-decoration: none;
 	color: #F0F0F0;
     font-size: 24px;
